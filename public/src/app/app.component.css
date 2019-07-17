@@ -1,0 +1,48 @@
+.container{
+    display: inline-block;
+}
+
+/* Cakes */
+.cakes{
+    border: 1px solid black;
+    display: inline-block;
+    height: 300px;
+    width: 400px;
+}
+.cakes_h3{
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+.cakes_form{
+    text-align: center;
+}
+.cakes_button{
+    margin: 10px;
+}
+/* ------------------------------------- */
+
+/* Rated Cakes */
+.rated_cakes{
+    border: 1px solid black;
+    display: block;
+    height: 500px;
+    width: 400px;
+    margin-top: 10px;
+}
+/* ------------------------------------- */
+
+/* Rate */
+.rate{
+    border: 2px solid green;
+    display: inline-block;
+    height : 600px;
+    width: 500px;
+    vertical-align: top;
+    position: relative;
+    margin-left: 30px;
+}
+.rate_div{
+    border: 1px solid red;
+}
+/* ------------------------------------- */
+
