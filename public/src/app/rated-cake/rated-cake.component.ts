@@ -10,5 +10,6 @@ export class RatedCakeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.specific_cake;
   }
 }

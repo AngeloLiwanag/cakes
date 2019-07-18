@@ -30,23 +30,28 @@ module.exports = {
         });
     },
     addRate: function(req, res){
-        console.log('Inside Cakes.js', req.body, req.params.id);
-        var Rating = new Rate({rate: req.body.rate, comment: req.body.comment});
-        Rating.save(function(err, rate){
-            if(err){
-                console.log('Returned error', err);
-                res.json({message: 'Error', error: err});
-            }else{
-                // var rating = {rate: req.body.rate, comment: req.body.comment};
-                Cake.findOneAndUpdate({_id:req.params.id}, {$push: {comments: Rating}}), function(err){
-                    if(err){
-                        console.log('Returned error', err);
-                    }else{
-                        console.log('Successfully Created Rate');
-                        res.json(rating)
-                    }
-                }
-            }
-        })
+        // console.log('Inside Cakes.js', req.body, req.params.id);
+        // var Rating = new Rate({rate: req.body.rate, comment: req.body.comment});
+        // Rating.save(function(err, rate){
+        //     if(err){
+        //         console.log('Returned error', err);
+        //         res.json({message: 'Error', error: err});
+        //     }else{
+        //         // var rating = {rate: req.body.rate, comment: req.body.comment};
+        //         Cake.findOneAndUpdate({_id:req.params.id}, {$push: {comments: Rating}}), function(err){
+        //             if(err){
+        //                 console.log('Returned error', err);
+        //             }else{
+        //                 console.log('Successfully Created Rate');
+        //                 res.json(rating)
+        //             }
+        //         }
+        //     }
+        // })
+        rating = new Rate({rate: req.body.rate, comment: req.body.comment});
+        console.log("this is rating", rating);
+        Cake.findOneAndUpdate({_id: req.params.id},{$push: {comments: rating}}, function(err) {
+
+        })    
     }
 }

@@ -10,8 +10,8 @@ import { HttpService } from './http.service';
 export class AppComponent implements OnInit{
   title = 'Rate My Cakes';
   cakes = [];
-  specific_cake=[];
-  newRate:any;
+  // specific_cake=[];
+  newRate: any;
   newCake: any;
   clicked: boolean;
   
@@ -42,8 +42,10 @@ export class AppComponent implements OnInit{
   onSubmitRate(id:string, newRate){
     console.log('Inside submit rate component')
     this._httpService.addRate(id,newRate).subscribe(data =>{
-      this.newRate = {rate: data.rate, comment: data.comment};
+      // this.newRate = {rate: data.rate, comment: data.comment};
+      this.newRate = {rate: "", comment: ""};
       console.log(newRate);
+      // this.ngOnInit();
     })
   }
 

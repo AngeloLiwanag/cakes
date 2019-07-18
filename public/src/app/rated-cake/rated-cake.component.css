@@ -5,5 +5,11 @@
     height: 500px;
     width: 400px;
     margin-top: 10px;
+    overflow-y:scroll;
+
+}
+.rated_cakes_img{
+    height: 200px;
+    width:250px;
 }
 /* ------------------------------------- */

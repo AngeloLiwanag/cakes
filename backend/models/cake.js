@@ -16,9 +16,9 @@ module.exports = function(app){
     
     var cakeSchema = new mongoose.Schema({
     
-        avg_rate : {
-            type: Number,
-        },
+        // avg_rate : {
+        //     type: Number,
+        // },
         baker_name : {
             type: String,
             required: true

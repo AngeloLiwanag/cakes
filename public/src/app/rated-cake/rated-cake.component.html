@@ -1,10 +1,10 @@
 <!-- Rated Cakes -->
 <div class="rated_cakes">
-<img src="{{specific_cake.img_url}}" alt="">
+<img class="rated_cakes_img" src="{{specific_cake.img_url}}" alt="">
 <h3>Average rating: </h3>
 <p>Made by: {{specific_cake.baker_name}}</p>
-<p>{{specific_cake.comments[0].rate}} stars</p>
-<p>{{specific_cake.comments[0].comment}}</p>
+<p *ngFor="let rate of specific_cake.comments">{{rate.rate}} stars</p>
+<p *ngFor="let comment of specific_cake.comments">{{comment.comment}}</p>
 <p>Average Rate: {{avg}}</p>
 
 </div>
