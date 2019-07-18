@@ -8,8 +8,18 @@ import { Component, OnInit, Input } from '@angular/core';
 export class RatedCakeComponent implements OnInit {
   @Input() specific_cake=[];
   constructor() { }
+  avg = 0;
 
   ngOnInit() {
-    this.specific_cake;
+    this.averageRate(this.specific_cake);
   }
+  averageRate(specific_cake){
+    var sum = 0;
+    for(let rate of specific_cake.comments) {
+      console.log(rate.rate);
+      sum = sum + rate.rate;
+    }
+    this.avg = sum / specific_cake.comments.length;
+  }
+
 }
